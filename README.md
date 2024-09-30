@@ -19,5 +19,13 @@
 
 *Table 1: Area Under Delta-Burden Curve (AUDBC) across different methods and LLMs. Text in bold denotes the method with the best performance, while <u>underlined</u> text means better than random (uniform sampling of â ∈ [0, 1]). For the details of AUDBC, please refer to our [paper](https://arxiv.org/abs/2407.14767).*
 
+## Run Experiments
+
+### Download the Text-to-SQL Databases
+```
+python download_text2sql_data.py
+```
+The script will download, unzip, and extract Text-to-SQL databases of [BIRD](https://bird-bench.github.io/) to the `./data` directory automatically.
+
 ## Playground
 See `playground.ipynb` for step-by-step walkthrough of how to obtain "need-user-support probability" with toy examples.
