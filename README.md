@@ -17,7 +17,7 @@
 | Write then Ask        | 0.4759  | 0.4497  | 0.4857  | 0.4735  | <u>0.5677</u>  | <u>0.5807</u>  | <u>0.5740</u>  |
 | Execute then Ask      | **<u>0.5096</u>**  | **0.4987**  | **<u>0.5848</u>**  | **<u>0.6313</u>**  | **<u>0.6242</u>**  | **<u>0.6641</u>**  | **<u>0.5989</u>**  |
 
-*Table 1: Area Under Delta-Burden Curve (AUDBC) across different methods and LLMs. Text in bold denotes the method with the best performance, while <u>underlined</u> text means better than random (uniform sampling of â ∈ [0, 1]).*
+*Table 1: Area Under Delta-Burden Curve (AUDBC) across different methods and LLMs. Text in bold denotes the method with the best performance, while <u>underlined</u> text means better than random (uniform sampling of â ∈ [0, 1]). For the details of AUDBC, please refer to our [paper](https://arxiv.org/abs/2407.14767).*
 
 ## Playground
 See `playground.ipynb` for step-by-step walkthrough of how to obtain "need-user-support probability" with toy examples.
