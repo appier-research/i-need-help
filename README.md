@@ -3,5 +3,7 @@
 
 **Paper link:** https://arxiv.org/abs/2407.14767
 
+![Figure 1: Overview of our experiments on text-to-SQL. LLMs struggle to determine when they need help based solely on the instruction (x) or their output (y). They require external feedback, such as the execution results (r) from the database, to outperform random baselines.](assets/Figure_1.pdf)
+
 ## Playground
 See `playground.ipynb` for step-by-step walkthrough of how to obtain "need-user-support probability" with toy examples.
