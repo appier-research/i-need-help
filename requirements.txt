@@ -1,3 +1,9 @@
 requests
 tqdm
 colorama
+jsonlines
+datasets
+func_timeout
+openai
+matplotlib
+scipy

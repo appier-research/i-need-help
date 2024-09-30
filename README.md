@@ -19,13 +19,47 @@
 
 *Table 1: Area Under Delta-Burden Curve (AUDBC) across different methods and LLMs. Text in bold denotes the method with the best performance, while <u>underlined</u> text means better than random (uniform sampling of â ∈ [0, 1]). For the details of AUDBC, please refer to our [paper](https://arxiv.org/abs/2407.14767).*
 
-## Run Experiments
+## How to Run Experiments
+
+### Install Dependencies
+```
+pip install -r requirements.txt
+```
 
 ### Download the Text-to-SQL Databases
 ```
 python download_text2sql_data.py
 ```
 The script will download, unzip, and extract Text-to-SQL databases of [BIRD](https://bird-bench.github.io/) to the `./data` directory automatically.
+
+### Run the Main Script
+Before running the script, make sure to set your OpenAI API key:
+```
+export OPENAI_API_KEY=<your-api-key>
+```
+
+Suppose you want to test the performance of `gpt-4o-mini-2024-07-18`:
+```
+python src/run.py \
+    --series "openai" \
+    --model_name "gpt-4o-mini-2024-07-18" \
+    --method "EA"  # ["DA", "WA", "EA"]
+```
+Abbreviations:
+- DA: Direct Ask
+- WA: Write then Ask
+- EA: Execute then Ask
+
+As the script runs, you can find the results in the `./results/<series>_<model_name>.jsonl` directory.
+
+### Visualize the Results
+To visualize the performance curves (Delta-Burden Curve, PR Curve, and Flip Rate Curve) and inspect the performance of each method, run:
+```
+python src/visualize.py \
+    --jsonl "./results/openai_gpt-4o-mini-2024-07-18.jsonl" \  # path to the jsonl file
+    --methods "Random EA"  # specify the methods to plot
+```
+If you want to plot all methods, you can specify `--methods "Random DA WA EA"`.
 
 ## Playground
 See `playground.ipynb` for step-by-step walkthrough of how to obtain "need-user-support probability" with toy examples.
